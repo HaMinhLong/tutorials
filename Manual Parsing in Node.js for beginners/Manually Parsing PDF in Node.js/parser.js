@@ -10,48 +10,58 @@ let patients = [];
 
 // Make a IIFE so we can run asynchronous code
 (async () => {
+  // Await all of the patients to be passed
+  // For each file in the patients folder
+  await Promise.all(
+    files.map(async (file) => {
+      // Set up the pdf parser
+      let pdfParser = new PDFParser(this, 1);
 
-    // Await all of the patients to be passed
-    // For each file in the patients folder
-    await Promise.all(files.map(async (file) => {
+      // Load the pdf document
+      pdfParser.loadPDF(`patients/${file}`);
+      // Parsed the patient
+      let patient = await new Promise(async (resolve, reject) => {
+        // On data ready
+        pdfParser.on("pdfParser_dataReady", (pdfData) => {
+          // The raw PDF data in text form
+          const raw = pdfParser.getRawTextContent().replace(/\r\n/g, " ");
 
-        // Set up the pdf parser
-        let pdfParser = new PDFParser(this, 1);
+          // Return the parsed data
+          resolve({
+            name: /Name\s(.*?)Address/i.exec(raw)[1].trim(),
+            address: /Address\s(.*?)Phone/i.exec(raw)[1].trim(),
+            phone: /Phone\s(.*?)Birthday/i.exec(raw)[1].trim(),
+            birthday: /Birthday\s(.*?)Email\sAddress/i.exec(raw)[1].trim(),
+            emailAddress: /Email\sAddress\s(.*?)Blood\stype/i
+              .exec(raw)[1]
+              .trim(),
+            bloodType: /Blood\stype\s(.*?)Height/i.exec(raw)[1].trim(),
+            height: /Height\s(.*?)Weight/i.exec(raw)[1].trim(),
+            weight: /Weight\s(.*?)--/i.exec(raw)[1].trim(),
+          });
 
-        // Load the pdf document
-        pdfParser.loadPDF(`patients/${file}`);
-
-        // Parsed the patient
-        let patient = await new Promise(async (resolve, reject) => {
-
-            // On data ready
-            pdfParser.on("pdfParser_dataReady", (pdfData) => {
-
-                // The raw PDF data in text form
-                const raw = pdfParser.getRawTextContent().replace(/\r\n/g, " ");
-
-                // Return the parsed data
-                resolve({
-                    name: /Name\s(.*?)Address/i.exec(raw)[1].trim(),
-                    address: /Address\s(.*?)Phone/i.exec(raw)[1].trim(),
-                    phone: /Phone\s(.*?)Birthday/i.exec(raw)[1].trim(),
-                    birthday: /Birthday\s(.*?)Email\sAddress/i.exec(raw)[1].trim(),
-                    emailAddress: /Email\sAddress\s(.*?)Blood\stype/i.exec(raw)[1].trim(),
-                    bloodType: /Blood\stype\s(.*?)Height/i.exec(raw)[1].trim(),
-                    height: /Height\s(.*?)Weight/i.exec(raw)[1].trim(),
-                    weight: /Weight\s(.*?)--/i.exec(raw)[1].trim()
-                });
-
-            });
-
+          // resolve({
+          //   title: /Nhóm 6 Đề bài:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau1: /Câu 1:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau2: /Câu 2:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau3: /Câu 3:(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau4: /Câu 4:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau5: /Câu 5:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau6: /Câu 6:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau7: /Câu 7:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau8: /Câu 8:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau10: /Câu 10:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau11: /Câu 11:\s(.*?)\sCâu/i.exec(raw)[1].trim(),
+          //   cau12: /Câu 12:\s(.*?)\s--/i.exec(raw)[1].trim(),
+          // });
         });
+      });
 
-        // Add the patient to the patients array
-        patients.push(patient);
+      // Add the patient to the patients array
+      patients.push(patient);
+    })
+  );
 
-    }));
-
-    // Save the extracted information to a json file
-    fs.writeFileSync("patients.json", JSON.stringify(patients));
-
-})();  
+  // Save the extracted information to a json file
+  fs.writeFileSync("patients.json", JSON.stringify(patients));
+})();
