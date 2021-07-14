@@ -1,0 +1,15 @@
+[
+  {
+    "number": "Câu 1",
+    "content": "Xin chào anh/chị, hôm nay chúng em thực hiện một buổi phỏng vấn tới các gia đình có con cái phải nghỉ học do Covid-19. Anh/chị có thể giới thiệu đôi lời về bản thân được không ạ?"
+  },
+  { "number": "Câu 2", "content": "Hiện nay con anh/chị đang học lớp mấy ạ?" },
+  {
+    "number": "Câu 3",
+    "content": "Anh/chị hãy cho biết cảm nghĩ của mình khi nhận thông báo tất cả các trường trong đó cótrường con anh/chị đang theo học phải nghỉ để phòng chống covid 19?"
+  },
+  {
+    "number": "Câu 4",
+    "content": "Xin anh/chị hãy kể chi tiết những băn khoăn,trăn trở khi nhận được thông tin học online ởnhà?"
+  }
+]

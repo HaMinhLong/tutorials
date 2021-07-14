@@ -1,72 +1,39 @@
 [
   {
-    "name": "Donovan Cottrell",
-    "address": "2710 Joyce Street  Fairhope, AL 36532",
-    "phone": "251-928-0994",
-    "birthday": "October 22, 1962",
-    "emailAddress": "DonovanBCottrell@armyspy.com",
-    "bloodType": "B+",
-    "height": "178",
-    "weight": "85.6"
+    "number": "1",
+    "content": "Xin chào anh/chị, hôm nay chúng em thực hiện một buổi phỏng vấn tới các gia  đình có con cái phải nghỉ học do Covid-19. Anh/chị có thể giới thiệu đôi lời về bản thân  được không ạ?"
+  },
+  { "number": "2", "content": "Hiện nay con anh/chị đang học lớp mấy ạ?" },
+  {
+    "number": "3",
+    "content": "Anh/chị hãy cho biết cảm nghĩ của mình khi nhận thông báo tất cả các trường  trong đó có trường con anh/chị đang theo học phải nghỉ để phòng chống covid 19?"
   },
   {
-    "name": "Herbert Denny",
-    "address": "727 Fowler Avenue  Chamblee, GA 30341",
-    "phone": "770-220-4978",
-    "birthday": "October 13, 1973",
-    "emailAddress": "HerbertVDenny@dayrep.com",
-    "bloodType": "O+",
-    "height": "184",
-    "weight": "78.5"
+    "number": "4",
+    "content": "Xin anh/chị hãy kể chi tiết những băn khoăn, trăn trở khi nhận được thông tin học  online ở nhà?"
   },
   {
-    "name": "Gordon White",
-    "address": "4115 Pinnickinick Street  Camas, WA 98607",
-    "phone": "360-833-2114",
-    "birthday": "March 11, 1954",
-    "emailAddress": "GordonRWhite@dayrep.com",
-    "bloodType": "O-",
-    "height": "186",
-    "weight": "84.1"
+    "number": "5",
+    "content": "Khi nhận được tin con anh/chị phải học online thì anh/chị đã lên kế hoạch, dự  định gì để hỗ trợ cho con anh/chị học?"
   },
   {
-    "name": "Jasmine Lang",
-    "address": "4650 Oakwood Avenue  New York, NY 10007",
-    "phone": "432-625-0002",
-    "birthday": "October 15, 1980",
-    "emailAddress": "JasmineSLang@teleworm.us",
-    "bloodType": "A+",
-    "height": "163",
-    "weight": "60.9"
+    "number": "6",
+    "content": "Anh/chị có thể chia sẻ những ảnh hưởng của việc con cái phải chuyển sang học  online tại nhà đến anh/chị không?"
   },
   {
-    "name": "Juanita Miller",
-    "address": "1001 Sumner Street  Riverside, CA 92507",
-    "phone": "310-591-4624",
-    "birthday": "January 15, 1967",
-    "emailAddress": "JuanitaTMiller@jourrapide.com",
-    "bloodType": "O+",
-    "height": "172",
-    "weight": "100.1"
+    "number": "7",
+    "content": "Anh/chị nghĩ con của mình đã thích nghi với việc học online không?"
   },
   {
-    "name": "Tyler Smith",
-    "address": "4560 Hide A Way Road  Orlando, FL 32811",
-    "phone": "407-995-6876",
-    "birthday": "March 21, 1940",
-    "emailAddress": "TylerISmith@jourrapide.com",
-    "bloodType": "O+",
-    "height": "165",
-    "weight": "99.4"
+    "number": "8",
+    "content": " Con của anh/chị có phải gặp vấn đề về kỹ thuật trong việc sử dụng phần mềm học online không?"
   },
   {
-    "name": "William Nelson",
-    "address": "2599 South Street  Midland, TX 79701",
-    "phone": "432-625-0002",
-    "birthday": "February 2, 1991",
-    "emailAddress": "WilliamSNelson@armyspy.com",
-    "bloodType": "O+",
-    "height": "173",
-    "weight": "97.8"
+    "number": "11",
+    "content": "Qua một thời gian học online của con cái vừa rồi, anh/chị có thấy sự khác nhau  trong kết quả học tập khi học tại trường và học online tại nhà của con anh/chị không?"
+  },
+  {
+    "number": "12",
+    "content": "Cuối cùng, xin anh/chị hãy gửi đến những gia đình cũng có con cái học online  một vài lời chia sẻ về các phương pháp hữu ích giúp con cái học tập tốt mùa dịch?"
   }
 ]

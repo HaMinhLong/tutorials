@@ -60,10 +60,43 @@ is-fullwidth-code-point@^3.0.0:
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
   integrity sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
 
-lodash@^4.17.21:
+lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+minimist@~0.0.1:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
+  integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
+
+optimist@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
+  integrity sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
+  dependencies:
+    minimist "~0.0.1"
+    wordwrap "~0.0.2"
+
+pdf-to-text@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/pdf-to-text/-/pdf-to-text-0.0.7.tgz#d1cd75b6a9f3782a14bcdf9fe6bc02f74cd7ecd3"
+  integrity sha1-0c11tqnzeCoUvN+f5rwC90zX7NM=
+
+pdf.js-extract@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/pdf.js-extract/-/pdf.js-extract-0.1.5.tgz#0e8652c1aefcef08e91a9f1b3c691ea43d219bf7"
+  integrity sha512-ZnudGaH5Q41FMeGKgOOCMO6Ybluxc87lB0shYYx0FliKHQLSs7YrXx6ZOu7oC+ZePyMQnTOtBK65dW0aawmB/Q==
+
+pdf2json@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/pdf2json/-/pdf2json-1.2.1.tgz#789b7b14ba30fc287344f69f1fdd78b9410b30fb"
+  integrity sha512-Ihda4iOiiINYRwvdpHFHBFrRc/vT+w10Kc3o2meOB0HSPDEVMrb+X+V5oUOawipqNT/aI3dazSicwNyJzDLPaQ==
+  dependencies:
+    async "^3.2.0"
+    lodash "^4.17.20"
+    optimist "^0.6.1"
+    xmldom "^0.5.0"
 
 pdf2json@^1.1.8:
   version "1.2.3"
@@ -74,6 +107,13 @@ pdf2json@^1.1.8:
     lodash "^4.17.21"
     xmldom "^0.6.0"
     yargs "^17.0.1"
+
+pdfreader@^1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/pdfreader/-/pdfreader-1.2.10.tgz#4cb05a3c155d68a638dd7a335a50b926a7adc8cc"
+  integrity sha512-oTrXTbqI9PG6uJssAPsfw4mo+9Tqi7kM/ZIpfRbikBIO2KZEL9gI8w8YbP65DcAVdn8RLq9jpYZKd1ggA9FI4A==
+  dependencies:
+    pdf2json "1.2.1"
 
 require-directory@^2.1.1:
   version "2.1.1"
@@ -96,6 +136,11 @@ strip-ansi@^6.0.0:
   dependencies:
     ansi-regex "^5.0.0"
 
+wordwrap@~0.0.2:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  integrity sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
+
 wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
@@ -104,6 +149,11 @@ wrap-ansi@^7.0.0:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
+
+xmldom@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.5.0.tgz#193cb96b84aa3486127ea6272c4596354cb4962e"
+  integrity sha512-Foaj5FXVzgn7xFzsKeNIde9g6aFBxTPi37iwsno8QvApmtg7KYrr+OPyRHcJF7dud2a5nGRBXK3n0dL62Gf7PA==
 
 xmldom@^0.6.0:
   version "0.6.0"

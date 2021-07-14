@@ -4,7 +4,10 @@
   "description": "",
   "main": "parser.js",
   "dependencies": {
-    "pdf2json": "^1.1.8"
+    "pdf-to-text": "^0.0.7",
+    "pdf.js-extract": "^0.1.5",
+    "pdf2json": "^1.1.8",
+    "pdfreader": "^1.2.10"
   },
   "devDependencies": {},
   "scripts": {
